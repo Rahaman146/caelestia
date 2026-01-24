@@ -28,6 +28,12 @@ function fish_greeting
         case alacritty
             pokemon-colorscripts --random
             #pokeget random | less -S
+        case xterm-kitty
+            clear
+            kitty +kitten icat --place 40x20@0x0 --silent ~/.config/kitty/anime_rounded.png
+            tput cup 10 0
+            echo
+            #fastfetch --logo none --key-color 6 --separator " → "
         case "*"
             # Other terms → nothing special
     end
